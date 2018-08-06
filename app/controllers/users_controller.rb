@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in @user
-      flash[:success] = "Welcome to Life's Great Secret !"
+      flash[:success] = "Bienvenue jeune initié !"
       redirect_to @user
     else
       render 'new'
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes(user_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Compte de l'initié mis à jour"
       redirect_to @user
     else
       render 'edit'
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
 
   def destroy
     User.find(params[:id]).destroy
-    flash[:danger] = "User deleted"
+    flash[:danger] = "Votre compte d'initié à été révoqué !"
     redirect_to "/"
   end
 
@@ -55,7 +55,7 @@ class UsersController < ApplicationController
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = "Please log in."
+      flash[:danger] = "Ce contenu n'est disponible qu'aux initiés"
       redirect_to login_url
     end
   end

@@ -2,12 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 section.CTA {
-
+  min-height: 100vh;
   background-image: url(asset-path("bg.jpg"));
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  min-height: 100vh;
-  max-height: 100vh;
+  background-size: auto 100%;
 }
 
 div.section {

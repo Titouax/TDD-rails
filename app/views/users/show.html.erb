@@ -3,17 +3,16 @@
   <div class="container">
     <div class="row">
       <div class="col-1"></div>
-      <div class="col-3">
+      <div class="col-md-3">
         <center>
           <%= image_tag('2.jpeg', class: "img-responsive IMG", id: "navbar-logo", width: "150px", height: "150px") %>
           <h3><%= @user.first_name%> <%= @user.last_name %></h3>
           <p>Tu es connecté avec l'adresse : <%= @user.email %></p>
         </center>
       </div>
-      <div class="col-7 info">
-        <p>Souhaitez-vous connaitre la réponse à la question que tout le monde se pose ?<br>
-        Souhaitez-vous connaitre la réponse de l'Univers ?</p>
-        <a href="/thgttg-secret" class="btn btn-primary">Cliquez ici</a>
+      <div class="col-md-7 info">
+        <p>Tu fais partie du club maintenant Mamène ! Pas de bétises ! En cliquant sur ce lien, tu verra tous les membres du club !</p>
+        <a href="/the-private-club" class="btn btn-primary">Cliquez ici</a>
         <br><br>
 
         <p>Sinon, nous vous recommandons fortement de supprimer votre compte, afin d'éviter de céder à la tentation.</p>

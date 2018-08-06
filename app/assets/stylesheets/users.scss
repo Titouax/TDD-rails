@@ -2,20 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 section.CTA {
-  height: 550px;
+  min-height: 100vh;
   background-image: url(asset-path("bg.jpg"));
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto 100%;
   color: white;
 }
+
 section.Index {
+  min-height: 100vh;
   padding-top: 70px;
-  height: 550px;
   background-image: url(asset-path("bg.jpg"));
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: auto 100%;
   color: white;
   a{
+    color: white;
+  }
+  p {
     color: white;
   }
   .info{

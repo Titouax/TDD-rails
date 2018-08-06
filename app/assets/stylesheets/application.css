@@ -15,7 +15,28 @@
  *= require jquery-ui
  */
 
- 
+.alert {
+  top: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.left {
+  padding-right: 0 !important;
+}
+
+.right {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    min-height: 100vh;
+    max-width: 100%;
+}
+
+.row {
+  
+  margin-right: 0 !important;
+
+}
 
  .wrapper {
      background-color: red;
@@ -31,15 +52,12 @@
       min-height: 100vh;
  }
 
- #sidebar.active {
-     margin-left: -250px;
- }
-
  a[data-toggle="collapse"] {
      position: relative;
  }
 
  .dropdown-toggle::after {
+   margin-left: 20px;
      display: block;
      position: absolute;
      top: 50%;
@@ -72,19 +90,20 @@
 
  #sidebar {
      /* don't forget to add all the previously mentioned styles here too */
-     background: #7386D5;
+     background: #111;
      color: #fff;
      transition: all 0.3s;
  }
 
  #sidebar .sidebar-header {
      padding: 20px;
-     background: #6d7fcc;
+     background: #111;
  }
 
  #sidebar ul.components {
      padding: 20px 0;
-     border-bottom: 1px solid #47748b;
+     border-top: 1px solid #fff;
+     border-bottom: 1px solid #fff;
  }
 
  #sidebar ul p {
@@ -104,10 +123,10 @@
 
  #sidebar ul li.active > a, a[aria-expanded="true"] {
      color: #fff;
-     background: #6d7fcc;
+     background: #111;
  }
  ul ul a {
      font-size: 0.9em !important;
      padding-left: 30px !important;
-     background: #6d7fcc;
+     background: #111;
  }

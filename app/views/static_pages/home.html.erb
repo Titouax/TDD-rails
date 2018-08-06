@@ -3,13 +3,15 @@
     <div class="row align-items-center section">
       <div class="col-md-2"></div>
       <div class="col-8">
-        <h1>Bienvenue !</h1>
-        <br>
-        <br>
-        <h3>Ici, tu peux retrouver les moussaillons 🎓</h3>
         <% if logged_in? %>
+          <h3>Découvre les initiés à notre secte</h3>
           <br>
+          <%= link_to "Le Club", "/the-private-club", class: "btn btn-lg btn-primary"  %>
         <% else %>
+        <h3>Nous ne vous comptons pas encore parmis les initiés</h3>
+        <h5>Inscrivez-vous vite et devenez un membre de notre club secret</h5>
+        <br>
+        <h6>PS: Attention ! Il vous en comptera un bras et un peu d'argent !</h6>
           <%= link_to "Sign up", new_user_path, class: "btn btn-lg btn-primary"  %>
         <% end %>
       </div>

@@ -1,12 +1,22 @@
-<section class="CTA">
+<section class="Index">
   <div class="container">
-    <div class="row align-items-center" style="height: 550px">
-      <div class="col-3"></div>
-      <div class="col-6">
-        <h1>La réponse à la vie, l'univers et tout le reste ...</h1>
+    <% provide(:title, 'All users') %>
+    <h1>Liste des Utilisateurs</h1>
+    <br>
+    <center>
+      <div class="row" height:"400px" style='overflow:scroll'>
+        <div class="col-3"></div>
+        <div class="col-6 liste">
+          <% @users.each do |user| %>
+          <p>Utilisateur n°: <%= user.id%></p>
+          <p><%= user.first_name%> <%=user.last_name%></p>
+          <%= link_to user.email, user %>
+          <hr style="border: 1px solid white">
+          <% end %>
         </div>
-      <div class="col-3"></div>
-    </div>
+        <div class="col-3"></div>
+      </div>
+  </center>
   </div>
 
 </section>

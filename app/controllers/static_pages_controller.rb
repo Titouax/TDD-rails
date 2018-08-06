@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
   end
 
   def theclub
+      @users = User.all
   end
 
   private
@@ -18,7 +19,7 @@ class StaticPagesController < ApplicationController
   def logged_in_user
     unless logged_in?
       store_location
-      flash[:danger] = "Please log in."
+      flash[:danger] = "Ce contenu n'est disponible qu'aux initiés"
       redirect_to login_url
     end
   end
