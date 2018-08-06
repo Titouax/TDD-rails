@@ -3,13 +3,10 @@ require 'test_helper'
 class UsersLoginTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
-<<<<<<< HEAD
-=======
     @user2 = users(:frank)
     @all_users = []
     @all_users << users(:michael)
     @all_users << users(:frank)
->>>>>>> master
   end
 
 test "login with invalid information" do
@@ -42,7 +39,6 @@ end
     get login_path
     post login_path, params: { session: { email:    @user.email,
                                           password: 'password' } }
-<<<<<<< HEAD
     get root_path
     assert_select "a[href=?]", new_user_path, count: 0
     assert_select "a[href=?]", logout_path
@@ -53,18 +49,16 @@ end
     assert_select "p", @user.email
 
     get user_path(@user2)
-    assert_select "h3", "#{@user.first_name} #{@user.last_name}"
-    assert_select "p", @user.email
+    assert_select "h3", "#{@user2.first_name} #{@user2.last_name}"
+    assert_select "p", @user2.email
 
     get edit_user_path(@user)
     assert_select "a[href=?]", user_path(@user)
-=======
+
     get "/the-private-club"
     @all_users.each do |user|
-    assert_select "p", "#{user.first_name} #{user.last_name}"
-    assert_select "p", "#{user.email}"
+      assert_select "p", "#{user.first_name} #{user.last_name}"
+      assert_select "p", "#{user.email}"
     end
->>>>>>> master
   end
-
 end
