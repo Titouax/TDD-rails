@@ -7,7 +7,8 @@
         <center>
           <%= image_tag('2.jpeg', class: "img-responsive IMG", id: "navbar-logo", width: "150px", height: "150px") %>
           <h3><%= @user.first_name%> <%= @user.last_name %></h3>
-          <p>Tu es connecté avec l'adresse : <%= @user.email %></p>
+          <p>Tu es connecté avec l'adresse :</p>
+          <p><%= @user.email %></p>
         </center>
       </div>
       <div class="col-md-7 info">
