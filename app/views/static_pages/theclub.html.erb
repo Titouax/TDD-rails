@@ -9,8 +9,8 @@
         <div class="col-6 liste">
           <% @users.each do |user| %>
           <p>Utilisateur n°: <%= user.id%></p>
-          <p><%= user.first_name%> <%=user.last_name%></p>
-          <%= user.email  %> <br> <br>
+          <p><%= user.first_name%> <%= user.last_name%></p>
+          <p><%= user.email  %></p> <br> <br>
           <%= link_to "Voir le profil", user, class:"btn btn-primary" %>
           <hr style="border: 1px solid white">
           <% end %>

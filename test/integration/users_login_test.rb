@@ -4,7 +4,10 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
   def setup
     @user = users(:michael)
-
+    @user2 = users(:frank)
+    @all_users = []
+    @all_users << users(:michael)
+    @all_users << users(:frank)
   end
 
   test "login with invalid information" do
@@ -29,6 +32,17 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
 
     assert_select "h3", "#{@user.first_name} #{@user.last_name}"
     assert_select "p", @user.email
+  end
+
+  test "The club list users" do
+    get login_path
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
+    get "/the-private-club"
+    @all_users.each do |user|
+    assert_select "p", "#{user.first_name} #{user.last_name}"
+    assert_select "p", "#{user.email}"
+    end
   end
 
 end

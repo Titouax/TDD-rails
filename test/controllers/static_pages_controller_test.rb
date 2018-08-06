@@ -6,9 +6,8 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  test "should get secret" do
-    get the_private_club_url
-    assert_response :success
+  test "The club unavailable non-logged" do
+    get "/the-private-club"
+    assert_not flash.empty?
   end
-
 end
