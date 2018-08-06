@@ -1,9 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
   def setup
     @user = User.new(first_name: "Example",last_name: "lapin", email: "user@example.com",
                       password: "foobar", password_confirmation: "foobar")
@@ -27,8 +24,6 @@ class UserTest < ActiveSupport::TestCase
     @user.email = "     "
     assert_not @user.valid?
   end
-
-
 
   test "email validation should accept valid addresses" do
     valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
@@ -78,6 +73,4 @@ class UserTest < ActiveSupport::TestCase
   test "authenticated? should return false for a user with nil digest" do
     assert_not @user.authenticated?('')
   end
-
-
 end
