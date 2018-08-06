@@ -55,6 +55,9 @@ end
     get edit_user_path(@user)
     assert_select "a[href=?]", user_path(@user)
 
+    get edit_user_path(@user2)
+    assert_redirected_to root_path
+
     get "/the-private-club"
     @all_users.each do |user|
       assert_select "p", "#{user.first_name} #{user.last_name}"
