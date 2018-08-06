@@ -20,7 +20,7 @@ test "login with invalid information" do
 
   get login_path
   post login_path, params: { session: { email: @user.email,
-                                        password: 'banana' } }
+                                        password: 'password' } }
 
   get root_path
 
