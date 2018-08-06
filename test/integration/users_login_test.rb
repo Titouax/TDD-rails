@@ -54,6 +54,7 @@ end
 
     get edit_user_path(@user)
     assert_select "a[href=?]", user_path(@user)
+    assert_select "input[value=?]", @user.email
 
     get edit_user_path(@user2)
     assert_redirected_to root_path
