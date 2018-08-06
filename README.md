@@ -18,9 +18,9 @@ Rendez-vous dans votre dossier :
 ```sh 
 cd Desktop/votre_dossier
 ```
-Clonez l'application depuis le master
+Clonez l'application depuis votre repo
 ```sh
-git clone https://github.com/Titouax/TDD-rails
+git clone https://github.com/Ton_Pseudo/TDD-rails
 ```
 Rendez-vous dans le dossier de votre copie de l'application : 
 ```sh
