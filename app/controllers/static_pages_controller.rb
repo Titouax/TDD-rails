@@ -1,10 +1,10 @@
 class StaticPagesController < ApplicationController
-  before_action :logged_in_user, only: [:secret]
+  before_action :logged_in_user, only: [:theclub]
 
   def home
   end
 
-  def secret
+  def theclub
   end
 
   private

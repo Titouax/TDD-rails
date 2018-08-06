@@ -5,6 +5,12 @@
 <%= form_for(@user) do |f| %>
 <%= render 'shared/error_messages', object: @user %>
   <div class="form-group">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, class: 'form-control', placeholder: 'Prénom' %>
+  <div class="form-group">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, class: 'form-control', placeholder: 'Nom' %>
+  <div class="form-group">
   <%= f.label :email %>
   <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
   <!--Commentaire d'input-->

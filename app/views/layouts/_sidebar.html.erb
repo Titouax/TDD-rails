@@ -1,0 +1,30 @@
+<div class="wrapper">
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>TDD Rails</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <p>Menu</p>
+
+            <% if logged_in? %>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Account
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <span class="dropdown-item"><%= link_to "Users", users_path %></span>
+                <span class="dropdown-item"><%= link_to "Profile", current_user %></span>
+                <span class="dropdown-item"><%= link_to "Settings", edit_user_path(current_user) %></span>
+                <div class="dropdown-divider"></div>
+                <span class="dropdown-item"><%= link_to "Log out", logout_path, method: :delete %></span>
+              </div>
+            </li>
+            <% else %>
+              <p><li><%= link_to "Sign up", new_user_path %></li> <li><%= link_to "Log in", login_path %></li></p>
+            <% end %>
+        </ul>
+    </nav>
+
+</div>
