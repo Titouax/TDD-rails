@@ -2,12 +2,12 @@ require 'test_helper'
 
 class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
-    get static_pages_home_url
+    get root_path
     assert_response :success
   end
 
   test "should get secret" do
-    get static_pages_secret_url
+    get the_private_club_url
     assert_response :success
   end
 

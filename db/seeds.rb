@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 # Creation de mon login personnel
-frank = User.create(email: "TheFSilver@gmail.com",
+frank = User.create(first_name: "Bruce",last_name: "Wayne", email: "TheFSilver@gmail.com",
                     password: "Answer42", password_confirmation: "Answer42")
