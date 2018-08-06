@@ -6,7 +6,7 @@ Ce site est un club privé et contient la Réponse de l'Univers.
 Seuls les utilisateurs enregistrés peuvent accéder à la réponse...
 
 # Instructions # 
-Ce projet est une application Ruby on Rails permettant d'avoir des utilisateurs avec Login et Mot de passe et vous entrainer aux Test-Driven-Development (TDD pour les intimes) 
+Ce projet est une application Ruby on Rails permettant d'avoir des utilisateurs avec Login et Mot de passe et de vous entrainer aux Test-Driven-Development (TDD pour les intimes) 
 Vous pouvez clonez ce projet, le visitez <a href="https://tdd-rails.herokuapp.com/">ici</a> ou le refaire from scratch grâce aux instructions.  
 
 # Cloner ce repo et installer l'application #
