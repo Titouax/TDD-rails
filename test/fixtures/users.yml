@@ -6,10 +6,10 @@ michael:
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
 
-  frank:
-    first_name: Michael
-    last_name: Example
-    email: michael@example.com
+frank:
+    first_name: Frank
+    last_name: Lucas
+    email: frank@example.com
     password_digest: <%= User.digest('password') %>
 
 one:

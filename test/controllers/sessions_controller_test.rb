@@ -20,7 +20,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
    post "/login", params: { session: { first_name: "test", last_name: "test", email: "test@test.com", password: "password", password_confirmation: "password" } }
    get root_path
    assert_select("a[href=?]", "/logout")
-   assert_select("a[href=?]", "/users")
+   assert_select("a[href=?]", "/the-private-club")
    assert_no_match("a[href=?]", "/login")
    assert_no_match("a[href=?]", "/users/new")
 
@@ -43,7 +43,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     post "/users", params: { user: { first_name: "test2", last_name: "test2", email: "test2@mail.com", password: "password", password_confirmation: "password" } }
     get "/"
     assert_select("a[href=?]", "/logout")
-    assert_select("a[href=?]", "/users")
+    assert_select("a[href=?]", "/the-private-club")
     assert_no_match("a[href=?]", "/login")
     assert_no_match("a[href=?]", "/users/new")
   end
